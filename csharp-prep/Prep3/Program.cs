@@ -11,7 +11,7 @@ class Program
 
         while (guess != magicNmbr)
         {
-            Console.WriteLine("What is your guess? ");
+            Console.Write("What is your guess? ");
             guess = int.Parse(Console.ReadLine());
 
             if (magicNmbr < guess)
