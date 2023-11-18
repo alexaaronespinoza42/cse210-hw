@@ -14,7 +14,6 @@ class Scripture
 
     private List<Word> CreateWordList(string text)
     {
-        // Split the text into words
         string[] wordArray = text.Split(' ');
 
         List<Word> words = new List<Word>();
