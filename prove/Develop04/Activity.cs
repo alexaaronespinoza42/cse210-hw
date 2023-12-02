@@ -59,7 +59,7 @@ class Activity
         }
     }
 
-    public void ShowCountDown (int seconds)1
+    public void ShowCountDown (int seconds)
     {
         for (int i = seconds; i > 0; i--)
         {
