@@ -9,16 +9,16 @@ public class User
         _name = name;
     }
 
-    public void ChooseBruiser(Character character, string name, string bruiser)
+    public void CreateCharacter(Character character, string name, string characteristic)
     {
-        Console.WriteLine($"\n{_name} you created a new {bruiser} {character}!");
-        Console.WriteLine($"{name} the {bruiser} {character} is a character.");
+        Console.WriteLine($"\n{_name} you created a new {characteristic} {character}!");
+        Console.WriteLine($"{name} the {characteristic} {character} is a character.");
     } 
     public void FeedCharacter(Character character)
     {
         character.Feed();
     }
-    public void TrainWithCharacter(Character character)
+    public void PlayWithCharacter(Character character)
     {
         character.Play();
     }

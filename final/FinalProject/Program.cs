@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello FinalProject World!");
+        GameMenu menu = new GameMenu();
+        while(true)
+        {
+            menu.Start();
+        }
     }
 }

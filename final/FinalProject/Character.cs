@@ -3,20 +3,20 @@ using System;
 public abstract class Character
 {
     protected string _name;
-    protected string _bruiser;
+    protected string _characteristic;
     protected int _health;
     protected int _hunger;
     protected int _strength;
     public User _user;
 
-    public Character(string name, string bruiser)
+    public Character(string name, string characteristic)
     {
         Random random = new Random();
         _name = name;
-        _bruiser = bruiser;
-        _health = 100;
-        _hunger = 100;
-        _strength = 100;
+        _characteristic = characteristic;
+        _health = 60;
+        _hunger = 60;
+        _strength = 60;
     }
 
     public void Feed()
@@ -56,7 +56,7 @@ public abstract class Character
             _hunger = 0;
         }
 
-        Console.WriteLine($"\n{_name} is happy and playful.");
+        Console.WriteLine($"\n{_name} is stronger and smarter in battle.");
     }
     public void SetHealth(int health)
     {
@@ -68,9 +68,9 @@ public abstract class Character
         _hunger = hunger;
     }
 
-    public void SetStrength(int happiness)
+    public void SetStrength(int strength)
     {
-        _strength = happiness;
+        _strength = strength;
     }
     public bool IsDead()
     {
@@ -79,12 +79,12 @@ public abstract class Character
     public void DeathStatus()
     {
         Console.WriteLine($"\nNotification:");
-        Console.WriteLine($"\nOh no! Your {_bruiser} character {_name}, though healthy and strong, has died due to extreme hunger.\n");
+        Console.WriteLine($"\nOh no! Your {_characteristic} character {_name}, though healthy and strong, has died due to extreme hunger.\n");
     }
     public abstract string Activity();
     public virtual string CharacterDetails()
     {
-        return $"{_name} ({_bruiser})\nHealth: {_health}\nHunger: {_hunger}\nHappiness: {_strength}4";
+        return $"{_name} ({_characteristic})\nHealth: {_health}\nHunger: {_hunger}\nHappiness: {_strength}4";
     }
     public abstract string CharacterDetailsStringRepresentation();
 }
